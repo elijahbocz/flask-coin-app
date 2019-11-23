@@ -133,6 +133,13 @@ td {
   margin-top: 0;
 }
 
+.flex-container {
+  display: flex;
+}
+#date_input {
+  margin-right: 1rem;
+}
+
 .event-card {
     text-align: center;
     background: white;

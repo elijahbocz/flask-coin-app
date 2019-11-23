@@ -23,6 +23,19 @@
     >
   </p>
   <p><strong>Genesis date:</strong> {{ coin_data['genesis_date'] }}</p>
+  <form id="history-search-form" action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        <strong>{{ form.date_input.label }}</strong><br />
+        <p>(in dd-mm-yyyy eg. 30-12-2017)</p>
+        <div class="flex-container">
+        {{ form.date_input(size=32) }}<br />
+        {% for error in form.date_input.errors %}
+            <span class="error-message">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.search() }}</p></div>
+  </form>
   <p><strong>Description:</strong> {{ coin_data['description']['en'] }}</p>
 </div>
 {% endblock %}

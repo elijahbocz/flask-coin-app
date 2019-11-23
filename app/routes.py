@@ -6,7 +6,7 @@ from app.scripts.getters.coins_markets import get_bulk
 from app.scripts.getters.coin_detailed import get_coin_data
 from app.scripts.getters.crypto_events import fetch_events
 from app.scripts.getters.coin_history import get_coin_history_by_date
-from app.forms import SearchForm, HistorySearchForm
+from app.forms import SearchForm
 
 
 @app.route('/')
@@ -35,22 +35,7 @@ def search():
 def search_coin(coin):
     spaced_coin = str(coin).replace("-", " ")
     coin_data = get_coin_data(spaced_coin)
-    form = HistorySearchForm()
-    if form.validate_on_submit():
-        date_input = form.date_input.data
-        return redirect(url_for('.history_by_date', coin=coin, date=date_input))
-    return render_template('search_result.html', title=coin_data['name'], form=form, coin_data=coin_data, spaced_coin=spaced_coin)
-
-
-@app.route('/history')
-def history():
-    return 'Coin history'
-
-
-@app.route('/history/<coin>/<date>')
-def history_by_date(coin, date):
-    history_data = get_coin_history_by_date(coin, date)
-    return render_template('history.html', title=coin, data=history_data)
+    return render_template('search_result.html', title=coin_data['name'], coin_data=coin_data, spaced_coin=spaced_coin)
 
 
 @app.route('/upcoming-events')

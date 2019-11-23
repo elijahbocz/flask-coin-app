@@ -13,11 +13,16 @@
       href="https://fonts.googleapis.com/css?family=Nunito|Quicksand&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="header">
       <div class="header-title">
-        <img src="{{ url_for('static', filename='coin.svg') }}">
+        <img src="{{ url_for('static', filename='coin.svg') }}" />
         <h1>Coin Directory</h1>
       </div>
       <p class="separator"></p>

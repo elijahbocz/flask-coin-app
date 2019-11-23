@@ -4,12 +4,20 @@
     <tr>
       <th>Coin Name</th>
       <th>Current Price</th>
+      <th>High in past 24 Hours</th>
+      <th>Low in past 24 Hours</th>
+      <th>Price change in 24 Hours</th>
+      <th>Price Change in 24 Hours Percentage</th>
     </tr>
 
-  {% for element in names_and_prices %}
+  {% for element in data %}
   <tr>
-    <td>{{ element[0] }}</td>
-    <td>${{ element[1] }}</td>
+    <td>{{ element['name'] }}</td>
+    <td>${{ element['current_price'] }}</td>
+    <td>${{ element['high_24h'] }}</td>
+    <td>${{ element['low_24h'] }}</td>
+    <td>${{ element['price_change_24h'] }}</td>
+    <td>%{{ element['price_change_percentage_24h'] }}</td>
   </tr>
   {% endfor %}
 </table>

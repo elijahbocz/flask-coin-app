@@ -25,4 +25,18 @@ def get_names_and_prices():
         names_and_prices.append((element['name'], element['current_price']))
     return names_and_prices
 
-get_names_and_prices()
+
+def get_bulk():
+    data = fetch_us_markets()
+
+    bulk = []
+    for element in data:
+        obj = {}
+        obj['name'] = element['name']
+        obj['current_price'] = element['current_price']
+        obj['high_24h'] = element['high_24h']
+        obj['low_24h'] = element['low_24h']
+        obj['price_change_24h'] = element['price_change_24h']
+        obj['price_change_percentage_24h'] = element['price_change_percentage_24h']
+        bulk.append(obj)
+    return bulk

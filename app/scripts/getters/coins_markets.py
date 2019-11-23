@@ -1,6 +1,6 @@
 import json
 import requests
-from app.scripts.getters.coins_list import get_coin_ids
+from app.scripts.getters.coins_simple_lists import get_coin_ids
 
 ids = get_coin_ids()
 
@@ -33,6 +33,7 @@ def get_bulk():
     for element in data:
         obj = {}
         obj['name'] = element['name']
+        obj['image'] = element['image']
         obj['current_price'] = element['current_price']
         obj['high_24h'] = element['high_24h']
         obj['low_24h'] = element['low_24h']

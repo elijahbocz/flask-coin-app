@@ -43,3 +43,12 @@ def get_coin_names():
         names.append(element['name'])
 
     return names
+
+
+def get_coin_id_by_name(coin_name):
+    data = fetch_coins_list()
+    coin_id = ''
+    for element in data:
+        if str(coin_name).lower() == str(element['name']).lower():
+            coin_id = element['id']
+    return coin_id

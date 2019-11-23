@@ -1,4 +1,5 @@
-html, body  {
+html,
+body {
   margin: 0;
   padding: 0;
   background: #f6f6f6;
@@ -27,11 +28,11 @@ p {
 }
 .header a {
   text-decoration: none;
-  color: #FF824D;
+  color: #ff824d;
   margin-right: 8px;
 }
 .header a:hover {
-  color: #00ADB5;
+  color: #00adb5;
 }
 
 .coins-container {
@@ -44,8 +45,19 @@ p {
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
 }
 
-.coin-table th,td {
+.coin-table th,
+td {
   padding: 0.5rem;
+}
+
+.coin-table td img {
+  width: 25px;
+}
+
+.coin-name {
+  padding-left: 1rem;
+  position: relative;
+  top: -4px;
 }
 
 .coin-table tr:nth-child(odd) {
@@ -54,6 +66,23 @@ p {
 
 .about {
   text-align: center;
+  background: white;
+  color: #303841;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  margin: 1rem 20%;
+  padding: 1rem;
+}
+
+.search-form {
+  text-align: center;
+  background: white;
+  color: #303841;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  margin: 1rem 20%;
+  padding: 1rem;
+}
+
+.search-result {
   background: white;
   color: #303841;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);

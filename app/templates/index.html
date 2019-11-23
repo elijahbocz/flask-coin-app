@@ -10,16 +10,16 @@
       <th>Price Change in 24 Hours Percentage</th>
     </tr>
 
-  {% for element in data %}
-  <tr>
-    <td>{{ element['name'] }}</td>
-    <td>${{ element['current_price'] }}</td>
-    <td>${{ element['high_24h'] }}</td>
-    <td>${{ element['low_24h'] }}</td>
-    <td>${{ element['price_change_24h'] }}</td>
-    <td>%{{ element['price_change_percentage_24h'] }}</td>
-  </tr>
-  {% endfor %}
-</table>
+    {% for element in data %}
+    <tr>
+      <td><img src="{{ element['image'] }}"><span class='coin-name'>{{ element['name'] }}</span></td>
+      <td>${{ element['current_price'] }}</td>
+      <td>${{ element['high_24h'] }}</td>
+      <td>${{ element['low_24h'] }}</td>
+      <td>${{ element['price_change_24h'] }}</td>
+      <td>%{{ element['price_change_percentage_24h'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 </div>
 {% endblock %}

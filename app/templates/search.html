@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+<div class="search-form">
+  <form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.input.label }}<br />
+        {{ form.input(size=32) }}<br />
+        {% for error in form.input.errors %}
+            <span class="error-message">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <br />
+    <p>{{ form.search() }}</p>
+  </form>
+</div>
+{% endblock %}

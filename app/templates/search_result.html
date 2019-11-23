@@ -1,0 +1,8 @@
+{% extends "base.html" %} {% block content %}
+<h2 style="text-align: center; padding-top: 1rem;">{{ coin_data['name'] }}</h2>
+<div class="search-result">
+    <p><strong>Coin name:</strong> {{ coin_data['name'] }}</p>
+    <p><strong>Current Price:</strong> ${{ coin_data['market_data']['current_price']['usd'] }}</p>
+    <p><strong>Description:</strong> {{ coin_data['description']['en'] }}</p>
+</div>
+{% endblock %}

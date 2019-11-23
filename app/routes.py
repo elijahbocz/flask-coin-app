@@ -1,7 +1,7 @@
 from app import app
 import requests
 import json
-from flask import render_template
+from flask import render_template, url_for, redirect
 from app.scripts.getters.coins_markets import get_bulk
 from app.scripts.getters.coin_detailed import get_coin_data
 from app.forms import SearchForm
@@ -23,7 +23,12 @@ def about():
 def search():
     form = SearchForm()
     if form.validate_on_submit():
-        user_input = form.input.data
-        coin_data = get_coin_data(user_input)
-        return render_template('search_result.html', title=user_input, coin_data=coin_data)
+        coin = form.input.data
+        return redirect(url_for('.search_coin', coin=coin))
     return render_template('search.html', form=form)
+
+
+@app.route('/search/<coin>')
+def search_coin(coin):
+    coin_data = get_coin_data(coin)
+    return render_template('search_result.html', coin_data=coin_data)

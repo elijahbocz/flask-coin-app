@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired
 
 
 class SearchForm(FlaskForm):
-    input = StringField('Enter in coin id:', validators=[DataRequired()])
+    input = StringField('Enter In Coin Name:', validators=[DataRequired()])
     search = SubmitField('Search')

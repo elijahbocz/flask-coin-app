@@ -1,8 +1,28 @@
 {% extends "base.html" %} {% block content %}
-<h2 style="text-align: center; padding-top: 1rem;">{{ coin_data['name'] }}</h2>
+<div class="search-result-header">
+  <h2>{{ coin_data['name'] }}</h2>
+  <img src="{{ coin_data['image'].small}}" />
+</div>
 <div class="search-result">
-    <p><strong>Coin name:</strong> {{ coin_data['name'] }}</p>
-    <p><strong>Current Price:</strong> ${{ coin_data['market_data']['current_price']['usd'] }}</p>
-    <p><strong>Description:</strong> {{ coin_data['description']['en'] }}</p>
+  <p>
+    <strong>Coin name:</strong> {{ coin_data['name'] }},
+    <span>{{ coin_data['localization']['ru'] }}</span>,
+    <span>{{ coin_data['localization']['zh'] }}</span>,
+    <span>{{ coin_data['localization']['ja'] }}</span>,
+    <span>{{ coin_data['localization']['ko'] }}</span>,
+    <span>{{ coin_data['localization']['ar'] }}</span>
+  </p>
+  <p>
+    <strong>Current Price:</strong> ${{
+    coin_data['market_data']['current_price']['usd'] }}
+  </p>
+  <p>
+    <strong>Home page:</strong>
+    <a href="{{ coin_data['links']['homepage'][0] }}"
+      >{{ coin_data['links']['homepage'][0] }}</a
+    >
+  </p>
+  <p><strong>Genesis date:</strong> {{ coin_data['genesis_date'] }}</p>
+  <p><strong>Description:</strong> {{ coin_data['description']['en'] }}</p>
 </div>
 {% endblock %}

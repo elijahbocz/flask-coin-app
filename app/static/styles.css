@@ -14,14 +14,18 @@ p {
   padding: 0;
 }
 
+.separator {
+  padding: 0.5rem;
+}
+
 .header {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   background: #303841;
   text-align: center;
   color: white;
-  padding: 1rem;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
 }
 .header h1 {
   font-size: 2rem;
@@ -29,10 +33,21 @@ p {
 .header a {
   text-decoration: none;
   color: #ff824d;
-  margin-right: 8px;
+  margin: 0.75rem;
+  font-weight: bold;
 }
 .header a:hover {
   color: #00adb5;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.header-title img {
+  width: 5rem;
 }
 
 .coins-container {
@@ -82,10 +97,34 @@ td {
   padding: 1rem;
 }
 
+#search {
+  background: #ff824d;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+#search:hover {
+  cursor: pointer;
+  opacity: .9;
+}
+.search-result-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.search-result-header h2 {
+  padding: 1rem;
+}
+
 .search-result {
   background: white;
   color: #303841;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   margin: 1rem 20%;
   padding: 1rem;
+  margin-top: 0;
 }

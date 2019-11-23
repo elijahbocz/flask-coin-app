@@ -1,0 +1,56 @@
+html, body  {
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+  color: #303841;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  margin: 0;
+  background: #303841;
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+}
+.header h1 {
+  font-size: 2rem;
+}
+.header a {
+  text-decoration: none;
+  color: #FF824D;
+  margin-right: 8px;
+}
+.header a:hover {
+  color: #00ADB5;
+}
+
+.coin-table {
+  margin: 0 auto;
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+.coin-table th,td {
+  padding: 0.5rem;
+}
+
+.coin-table tr:nth-child(odd) {
+  background: rgba(0, 173, 181, 0.15);
+}
+
+.about {
+  text-align: center;
+  background: white;
+  color: #303841;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 20%;
+  padding: 1rem;
+}

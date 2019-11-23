@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<div class="coins-container">
+  <table class="coin-table">
+    <tr>
+      <th>Coin Name</th>
+      <th>Current Price</th>
+    </tr>
+
+  {% for element in names_and_prices %}
+  <tr>
+    <td>{{ element[0] }}</td>
+    <td>${{ element[1] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endblock %}

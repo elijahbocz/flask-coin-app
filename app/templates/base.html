@@ -1,0 +1,28 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>Coins</title>
+    {% endif %}
+    <link
+      href="{{ url_for('static', filename='styles.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Coin Landing</h1>
+      <a href="{{ url_for('index')}}">Home</a>
+      <a href="{{ url_for('about')}}">About</a>
+    </div>
+    <hr />
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <ul class="error-message">
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %} {% block content %}{% endblock %}
+  </body>
+</html>

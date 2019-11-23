@@ -54,4 +54,3 @@ def get_coin_id_by_name(coin_name):
     return coin_id
 
 
-print(get_coin_names())

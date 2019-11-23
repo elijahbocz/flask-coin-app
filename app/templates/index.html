@@ -12,7 +12,11 @@
 
     {% for element in data %}
     <tr>
-      <td><img src="{{ element['image'] }}"><span class='coin-name'>{{ element['name'] }}</span></td>
+      <td>
+        <img src="{{ element['image'] }}" /><span class="coin-name"
+          >{{ element['name'] }}</span
+        >
+      </td>
       <td>${{ element['current_price'] }}</td>
       <td>${{ element['high_24h'] }}</td>
       <td>${{ element['low_24h'] }}</td>

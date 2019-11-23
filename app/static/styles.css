@@ -14,6 +14,11 @@ p {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #00adb5;
+}
+
 .separator {
   padding: 0.5rem;
 }
@@ -31,7 +36,6 @@ p {
   font-size: 2rem;
 }
 .header a {
-  text-decoration: none;
   color: #ff824d;
   margin: 0.75rem;
   font-weight: bold;
@@ -127,4 +131,19 @@ td {
   margin: 1rem 20%;
   padding: 1rem;
   margin-top: 0;
+}
+
+.event-card {
+    text-align: center;
+    background: white;
+    color: #303841;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+    margin: 1rem 15%;
+    padding: 1rem;
+}
+
+.event-card img {
+  padding: 1rem;
+  width: 25rem;
+
 }

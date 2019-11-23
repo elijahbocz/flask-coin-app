@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<div class="upcoming-events">
+  {% if data %} {% for item in data['data'] %}
+  <div class="event-card">
+    <img src="{{ item['screenshot'] }}" alt="Event Preview" />
+    <p><strong>{{ item['title'] }} - {{ item['type'] }}</strong></p>
+    <p><strong>Organizer:</strong> {{ item['organizer'] }}</p>
+    <p>
+      <strong>Website:</strong
+      ><a href="{{ item['website'] }}"> {{ item['website'] }}</a>
+    </p>
+    <p><strong>Description:</strong> {{ item['description'] }}</p>
+    <p>
+      <strong>Start Date:</strong> {{ item['start_date'] }},
+      <strong>End Date:</strong> {{ item['end_date'] }}
+    </p>
+    <p>
+      <strong>Location:</strong> {{ item['venue'] }}, {{ item['city'] }} {{
+      item['country'] }}
+    </p>
+  </div>
+  {% endfor %} {% else %}
+  <p>There are not upcoming events at this time.</p>
+  {% endif %}
+</div>
+{% endblock %}

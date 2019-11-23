@@ -4,6 +4,7 @@ import json
 from flask import render_template, url_for, redirect
 from app.scripts.getters.coins_markets import get_bulk
 from app.scripts.getters.coin_detailed import get_coin_data
+from app.scripts.getters.crypto_events import fetch_events
 from app.forms import SearchForm
 
 
@@ -11,7 +12,7 @@ from app.forms import SearchForm
 @app.route('/index')
 def index():
     bulk = get_bulk()
-    return render_template('index.html', title='Coinz', data=bulk)
+    return render_template('index.html', title='Coin Directory', data=bulk)
 
 
 @app.route('/about')
@@ -24,11 +25,19 @@ def search():
     form = SearchForm()
     if form.validate_on_submit():
         coin = form.input.data
+        coin = str(coin).replace(" ", "-").lower()
         return redirect(url_for('.search_coin', coin=coin))
-    return render_template('search.html', form=form)
+    return render_template('search.html', title='Search Coins', form=form)
 
 
 @app.route('/search/<coin>')
 def search_coin(coin):
-    coin_data = get_coin_data(coin)
-    return render_template('search_result.html', coin_data=coin_data)
+    spaced_coin = str(coin).replace("-", " ")
+    coin_data = get_coin_data(spaced_coin)
+    return render_template('search_result.html', title=coin_data['name'], coin_data=coin_data, spaced_coin=spaced_coin)
+
+
+@app.route('/upcoming-events')
+def events():
+    events_data = fetch_events()
+    return render_template('events.html', title='Upcoming Events', data=events_data)

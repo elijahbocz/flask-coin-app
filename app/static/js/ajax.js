@@ -20,6 +20,13 @@ $('#search').click(function() {
   };
 
   $.ajax(settings).done(function(response) {
-    console.log(response);
+    if (response['market_data'] != undefined) {
+      var history_price = response['market_data']['current_price']['usd'];
+      $('#history-result').text(
+        'Price on ' + date_input + ': $' + history_price.toFixed(3)
+      );
+    } else {
+      $('#history-result').text('A price was not found for this date.');
+    }
   });
 });

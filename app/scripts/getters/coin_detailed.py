@@ -1,6 +1,7 @@
 import json
 import requests
 from app.scripts.getters.coins_simple_lists import get_coin_id_by_name
+from bs4 import BeautifulSoup
 
 
 def get_coin_data(coin_name):
@@ -13,4 +14,6 @@ def get_coin_data(coin_name):
 
     response = requests.request("GET", url, headers=headers)
     data = json.loads(response.text)
+    soup = BeautifulSoup(data['description']['en'])
+    data['description']['en'] = soup.get_text()
     return data

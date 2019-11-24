@@ -30,11 +30,11 @@
     <p>(dd-mm-yyyy eg. 30-12-2017)</p>
     <div class="flex-container">
       <p><input id="date_input" type="text"></p>
-      <p><button id="search">Search History</button></p>
+      <p><button id="search-history-button">Check</button></p>
     </div>
     <p id="history-result"></p>
     <p><strong>Description:</strong> {{ coin_data['description']['en'] }}</p>
   </div>
 </div>
-<script src="{{ url_for('static', filename='js/ajax.js') }}"></script>
+<script src="{{ url_for('static', filename='js/search_coin_history.js') }}"></script>
 {% endblock %}

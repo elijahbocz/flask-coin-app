@@ -37,7 +37,7 @@ a {
 }
 .header a {
   color: #ff824d;
-  margin: 0.75rem;
+  margin: 0.66rem;
   font-weight: bold;
 }
 .header a:hover {
@@ -51,7 +51,8 @@ a {
   text-align: center;
 }
 .header-title img {
-  width: 5rem;
+  width: 4rem;
+  margin-right: 0.25rem;
 }
 
 .coins-container {
@@ -133,11 +134,30 @@ td {
   margin-top: 0;
 }
 
+.search-result p {
+  padding-bottom: 0.25rem;
+}
+
 .flex-container {
   display: flex;
 }
 #date_input {
   margin-right: 1rem;
+}
+
+#search-history-button {
+  border: none;
+  border-radius: 6px;
+  background: #ff824d;
+  padding: 0.4rem 0.6rem;
+}
+#search-history-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#history-result {
+  color: #00adb5;
 }
 
 .event-card {

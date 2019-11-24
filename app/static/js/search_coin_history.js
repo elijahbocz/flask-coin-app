@@ -1,4 +1,4 @@
-$('#search').click(function() {
+$('#search-history-button').click(function() {
   var date_input = $('#date_input').val();
   var coin_name = window.location.pathname.substring(8);
 
@@ -23,7 +23,7 @@ $('#search').click(function() {
     if (response['market_data'] != undefined) {
       var history_price = response['market_data']['current_price']['usd'];
       $('#history-result').text(
-        'Price on ' + date_input + ': $' + history_price.toFixed(3)
+        'Approximate price on ' + date_input + ': $' + history_price.toFixed(8)
       );
     } else {
       $('#history-result').text('A price was not found for this date.');

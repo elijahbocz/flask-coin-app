@@ -1,5 +1,5 @@
 {% extends "base.html" %} {% block content %}
-<div class="upcoming-events">
+<div class="card" id="upcoming-events">
   {% if data %} {% for item in data['data'] %}
   <div class="event-card">
     <img src="{{ item['screenshot'] }}" alt="Event Preview" />

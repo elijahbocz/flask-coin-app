@@ -26,10 +26,12 @@
         <h1>Coin Directory</h1>
       </div>
       <p class="separator"></p>
-      <a href="{{ url_for('index')}}">Home</a>
-      <a href="{{ url_for('search')}}">Search</a>
-      <a href="{{ url_for('events')}}">Events</a>
-      <a href="{{ url_for('about')}}">About</a>
+      <div class="nav">
+        <a href="{{ url_for('index')}}">Home</a>
+        <a href="{{ url_for('search')}}">Search</a>
+        <a href="{{ url_for('events')}}">Events</a>
+        <a href="{{ url_for('about')}}">About</a>
+      </div>
     </div>
     {% with messages = get_flashed_messages() %} {% if messages %}
     <ul class="error-message">

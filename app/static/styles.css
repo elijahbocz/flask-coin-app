@@ -1,10 +1,12 @@
+/* Default Styles */
+
 html,
 body {
-  margin: 0;
-  padding: 0;
   background: #f6f6f6;
   color: #303841;
   font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -15,54 +17,70 @@ p {
 }
 
 a {
-  text-decoration: none;
   color: #00adb5;
+  text-decoration: none;
 }
 
 .separator {
   padding: 0.5rem;
 }
 
+.card {
+  background: white;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  color: #303841;
+  margin: 1rem 20%;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* HEADER STYLES */
+
 .header {
+  background: #303841;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  color: white;
   font-family: 'Quicksand', sans-serif;
   margin: 0;
-  background: #303841;
-  text-align: center;
-  color: white;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   padding: 1rem;
+  text-align: center;
 }
 .header h1 {
   font-size: 2rem;
 }
-.header a {
-  color: #ff824d;
-  margin: 0.66rem;
-  font-weight: bold;
-}
-.header a:hover {
-  color: #00adb5;
-}
 
+/* Logo and App Name */
 .header-title {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   text-align: center;
 }
 .header-title img {
-  width: 4rem;
   margin-right: 0.25rem;
+  width: 4rem;
 }
+
+/* Navigation Bar */
+.nav a {
+  color: #ff824d;
+  font-weight: bold;
+  margin: 0.66rem;
+}
+.nav a:hover {
+  color: #00adb5;
+}
+
+/* HOME PAGE */
 
 .coins-container {
   padding: 1rem;
 }
 
 .coin-table {
-  margin: 0 auto;
   background: white;
   box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
 }
 
 .coin-table th,
@@ -84,23 +102,7 @@ td {
   background: rgba(0, 173, 181, 0.15);
 }
 
-.about {
-  text-align: center;
-  background: white;
-  color: #303841;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
-  margin: 1rem 20%;
-  padding: 1rem;
-}
-
-.search-form {
-  text-align: center;
-  background: white;
-  color: #303841;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
-  margin: 1rem 20%;
-  padding: 1rem;
-}
+/* SEARCH PAGE */
 
 #search {
   background: #ff824d;
@@ -113,24 +115,22 @@ td {
   cursor: pointer;
   opacity: 0.9;
 }
+
+/* SEARCH RESULT STYLES */
+
 .search-result-header {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   text-align: center;
-  align-items: center;
 }
 
 .search-result-header h2 {
   padding: 1rem;
 }
 
-.search-result {
-  background: white;
-  color: #303841;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+#search-result-div {
   margin: 1rem 20%;
-  padding: 1rem;
   margin-top: 0;
 }
 
@@ -160,16 +160,15 @@ td {
   color: #00adb5;
 }
 
-.event-card {
-  text-align: center;
-  background: white;
-  color: #303841;
-  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
+/* EVENT STYLES */
+
+#upcoming-events {
   margin: 1rem 15%;
-  padding: 1rem;
 }
 
 .event-card img {
   padding: 1rem;
   width: 25rem;
 }
+
+/* ABOUT PAGE */

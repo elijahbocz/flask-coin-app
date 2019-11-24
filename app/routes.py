@@ -2,6 +2,7 @@ from app import app
 import requests
 import json
 from flask import render_template, url_for, redirect
+from flask_weasyprint import HTML, render_pdf
 from app.scripts.getters.coins_markets import get_bulk
 from app.scripts.getters.coin_detailed import get_coin_data
 from app.scripts.getters.crypto_events import fetch_events
@@ -42,3 +43,10 @@ def search_coin(coin):
 def events():
     events_data = fetch_events()
     return render_template('events.html', title='Upcoming Events', data=events_data)
+
+
+@app.route('/upcoming-events.pdf')
+def events_pdf():
+    events_data = fetch_events()
+    html = render_template('events.html', title='Upcoming Events', data=events_data)
+    return render_pdf(HTML(string=html))

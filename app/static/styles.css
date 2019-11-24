@@ -132,6 +132,7 @@ td {
 #search-result-div {
   margin: 1rem 20%;
   margin-top: 0;
+  text-align: left;
 }
 
 .search-result p {
@@ -172,3 +173,41 @@ td {
 }
 
 /* ABOUT PAGE */
+
+
+/* MOBILE STYLES */
+@media screen and (max-width: 750px) {
+
+  /* SEARCH STYLES */
+  #coin-search-form {
+    margin: 1rem;
+  }
+
+  /* SEARCH RESULT STYLES */
+  #search-result-div {
+    margin: 0 1rem;
+  }
+
+
+  /* EVENTS STYLES */
+  .event-card {
+    padding: 0.25rem;
+  }
+
+  .event-card img {
+    padding: 0;
+  }
+
+  #upcoming-events {
+    margin: 1rem;
+  }
+  #upcoming-events img {
+    width: 300px;
+  }
+
+  /* ABOUT PAGE */
+  #about {
+    margin: 1rem;
+  }
+
+}

@@ -12,5 +12,3 @@ def fetch_events():
     response = requests.request("GET", url, headers=headers)
     data = json.loads(response.text)
     return data
-
-

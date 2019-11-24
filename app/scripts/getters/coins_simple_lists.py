@@ -52,5 +52,3 @@ def get_coin_id_by_name(coin_name):
         if str(coin_name).lower() == str(element['name']).lower():
             coin_id = element['id']
     return coin_id
-
-

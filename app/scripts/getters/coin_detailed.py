@@ -14,6 +14,6 @@ def get_coin_data(coin_name):
 
     response = requests.request("GET", url, headers=headers)
     data = json.loads(response.text)
-    soup = BeautifulSoup(data['description']['en'])
+    soup = BeautifulSoup(data['description']['en'], features="html.parser")
     data['description']['en'] = soup.get_text()
     return data

@@ -35,7 +35,10 @@ def search():
 @app.route('/search/<coin>', methods=['GET', 'POST'])
 def search_coin(coin):
     spaced_coin = str(coin).replace("-", " ")
-    coin_data = get_coin_data(spaced_coin)
+    try:
+        coin_data = get_coin_data(spaced_coin)
+    except:
+        return redirect(url_for('search'))
     return render_template('search_result.html', title=coin_data['name'], coin_data=coin_data, spaced_coin=spaced_coin)
 
 
